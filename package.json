@@ -1,0 +1,29 @@
+{
+  "name": "h1emu-server-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/out/zoneserver.js",
+  "scripts": {
+    "start-login": "node out/loginserver.js",
+    "start-zone": "node out/zoneserver.js",
+    "install": "npm run build",
+    "build": "tsc",
+    "build-docker-zone":"docker build -f ./docker/zoneserver.Dockerfile -t h1emuzoneservertemplate:latest .",
+    "build-docker-login":"docker build -f ./docker/loginserver.Dockerfile -t h1emuloginservertemplate:latest ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H1emu/live-login-server.git"
+  },
+  "author": "Quentin Gruber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H1emu/live-login-server/issues"
+  },
+  "homepage": "https://github.com/H1emu/live-login-server#readme",
+  "dependencies": {
+    "@types/node": "^15.0.1",
+    "h1z1-server": "0.17.0",
+    "typescript": "^4.3.4"
+  }
+}
